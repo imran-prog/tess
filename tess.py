@@ -170,17 +170,43 @@ if __name__ == '__main__':
             sound.Sound.volume_set(int(query))
             speak("Volume changed to " + query + "percent")
 
+        # Shortcut Keys
+        elif "lock the system" in query:
+            keyboard.press_and_release("win + l")
+        elif "go to desktop" in query:
+            keyboard.press_and_release("win + d")
+        elif "minimize all" in query:
+            keyboard.press_and_release("win + m")
+        elif "undo" in query:
+            keyboard.press_and_release('ctrl + z')
+        elif "redo" in query:
+            keyboard.press_and_release("ctrl + y")
+        elif "paste" in query:
+            keyboard.press_and_release("ctrl + v")
+        elif "copy" in query:
+            keyboard.press_and_release("ctrl + c")
+        elif "cut" in query:
+            keyboard.press_and_release("ctrl + x")
+        elif "save" in query:
+            keyboard.press_and_release("ctrl + s")
+        elif "start" in query:
+            keyboard.press_and_release("win")
+        elif "select all" in query:
+            keyboard.press_and_release("ctrl + a")
+        elif "go to end" in query:
+            keyboard.press_and_release("ctrl + end")
+        elif "save the file" in query:
+            keyboard.press_and_release("ctrl + s")
+        elif "application" in query:
+            if "next" in query:
+                keyboard.press_and_release('alt + tab')
+            if "previous" in query:
+                keyboard.press_and_release('alt + shift + tab')
         elif "desktop" in query:
             if "next" in query:
                 keyboard.press_and_release('win + ctrl + right')
             if "previous" in query:
                 keyboard.press_and_release('win + ctrl + left')
-
-        elif "undo" in query:
-            keyboard.press_and_release('ctrl + z')
-
-        elif "redo" in query:
-            keyboard.press_and_release("ctrl + y")
 
         elif "send email" in query:
             try:
