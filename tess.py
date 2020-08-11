@@ -21,7 +21,7 @@ def wishMe():
     if 4 <= wishing.hour < 10:
         speak(wishing.morning_commands())
     elif 10 <= wishing.hour < 13:
-        speak("Sir what you want today for your lunch")
+        speak(wishing.noon_commands())
     elif 13 <= wishing.hour < 17:
         speak("Good Afternoon Sir! What are you doing")
     elif 17 <= wishing.hour < 20:
