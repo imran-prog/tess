@@ -1,6 +1,6 @@
 # Importing Modules
 import speech_recognition as sr
-import pyttsx3, wikipedia, webbrowser, os, smtplib, sys, pyperclip, mouseing
+import pyttsx3, wikipedia, webbrowser, os, smtplib, pyperclip, mouseing
 import time, weather_go, wishing, random, sound, keyboard, files_handling
 import instagram_controller
 
@@ -78,7 +78,7 @@ if __name__ == '__main__':
             speak(go)
 
         elif "who made you" in query:
-            comm = ["I am a creation of two best friends", "It was sir, who gave me birth"]
+            comm = ["I am a creation of two best friends", "I was made by two friends", "I am the creation of human"]
             go = random.choice(comm)
             speak(go)
 
