@@ -1,6 +1,6 @@
 # Importing Modules
 import speech_recognition as sr
-import pyttsx3, wikipedia, webbrowser, os, smtplib, sys, pyperclip
+import pyttsx3, wikipedia, webbrowser, os, smtplib, sys, pyperclip, mouseing
 import time, weather_go, wishing, random, sound, keyboard, files_handling
 
 
@@ -126,6 +126,10 @@ if __name__ == '__main__':
             extension = takeCommand().lower()
             files_handling.file_extensions(extension, query1)
             speak("File successfully generated")
+
+        elif "screen resolution" in query:
+            reso = mouseing.mouse_control.resolution()
+            speak(f"the resolution of this screen is {reso}")
 
         elif "the time" in query:
             strTime = wishing.time.strftime("%H:%M")
