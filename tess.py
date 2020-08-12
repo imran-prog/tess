@@ -3,6 +3,7 @@ import pyttsx3
 import speech_recognition as sr
 import wikipedia, webbrowser, os, smtplib, sys, pyperclip
 import time, weather_go, wishing, random, sound, keyboard
+import files_handling
 
 engine = pyttsx3.init('sapi5')
 voices = engine.getProperty('voices')
@@ -102,14 +103,6 @@ if __name__ == '__main__':
             print(results)
             speak(results)
 
-        elif "goto" in query or "go to" in query:
-            if "goto" in query:
-                query = query.replace("goto", "")
-            elif "go to" in query:
-                query = query.replace("go to", "")
-            speak(f'opening {query}')
-            open_web(query)
-
         elif "search google map" in query:
             if "search google map from clipboard" == query:
                 query = pyperclip.paste()
@@ -126,6 +119,14 @@ if __name__ == '__main__':
             pass
 
         # System processes
+
+        # Creating a New File
+        elif "open a new project file" in query:
+            query1 = query.replace("open a new project file index as", "")
+            speak("What type of file is this")
+            extension = takeCommand().lower()
+            files_handling.file_extensions(extension, query1)
+            speak("File successfully generated")
 
         elif "the time" in query:
             strTime = wishing.time.strftime("%H:%M")
@@ -220,6 +221,14 @@ if __name__ == '__main__':
             except Exception as e:
                 print(e)
                 speak("Sorry Sir, but this email can not be send")
+
+        elif "goto" in query or "go to" in query:
+            if "goto" in query:
+                query = query.replace("goto", "")
+            elif "go to" in query:
+                query = query.replace("go to", "")
+            speak(f'opening {query}')
+            open_web(query)
 
         # Alwidah
         elif "shutdown the system" in query:
