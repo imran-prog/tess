@@ -32,7 +32,6 @@ def security():
 
 def morning_commands():
     stat = ["increasing gradually", "decreasing"]
-
     morning = f"Good Morning. It's {hour} A.M. The weather in {location_of_me()} is {weather_go.city_temp} with {weather_go.city_weather}. The wind speed is {weather_go.city_wind_speed} and {random.choice(stat)}, and your exercise time will be starting in 30 minutes "
 
     return morning
@@ -42,4 +41,10 @@ def noon_commands():
     noon = random.choice(comm)
 
     return noon
+
+def afternoon_commands():
+    comm = ["Good Afternoon Sir!", "How was your launch today", "what would you take in dinner Sir", "sir do you want to know your next schedule"]
+    afternoon = random.choice(comm)
+
+    return afternoon
 
