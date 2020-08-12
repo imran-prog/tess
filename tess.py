@@ -175,6 +175,8 @@ if __name__ == '__main__':
             keyboard.press_and_release("win + l")
         elif "go to desktop" in query:
             keyboard.press_and_release("win + d")
+        elif "open settings" in query:
+            keyboard.press_and_release("win + i")
         elif "minimize all" in query:
             keyboard.press_and_release("win + m")
         elif "undo" in query:
