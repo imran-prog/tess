@@ -1,9 +1,8 @@
 # Importing Modules
-import pyttsx3
 import speech_recognition as sr
-import wikipedia, webbrowser, os, smtplib, sys, pyperclip
-import time, weather_go, wishing, random, sound, keyboard
-import files_handling
+import pyttsx3, wikipedia, webbrowser, os, smtplib, sys, pyperclip
+import time, weather_go, wishing, random, sound, keyboard, files_handling
+
 
 engine = pyttsx3.init('sapi5')
 voices = engine.getProperty('voices')
@@ -28,7 +27,7 @@ def wishMe():
     elif 17 <= wishing.hour < 23:
         speak(wishing.evening_commands())
     else:
-        speak("Its Getting dark Sir and you are still awake, do you Need any help")
+        speak(wishing.night_commands())
 
 
 def takeCommand():

@@ -46,3 +46,9 @@ def evening_commands():
     evening = random.choice(comm)
 
     return evening
+
+def night_commands():
+    comm = ["Happy new day sir", "do you need something to eat sir", "I think so sir this project must be very important to you", "new day is up sir and you are still awake"]
+    night = random.choice(comm)
+
+    return night
