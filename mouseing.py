@@ -34,6 +34,6 @@ class mouse_control:
         pyautogui.click(871, 442)
         pyautogui.click(871, 442)
 
-mouse_control.opening_computer_window()
-time.sleep(2)
-mouse_control.opening_folder()
+# mouse_control.opening_computer_window()
+# time.sleep(2)
+# mouse_control.opening_folder()

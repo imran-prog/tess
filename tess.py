@@ -2,6 +2,7 @@
 import speech_recognition as sr
 import pyttsx3, wikipedia, webbrowser, os, smtplib, sys, pyperclip, mouseing
 import time, weather_go, wishing, random, sound, keyboard, files_handling
+import instagram_controller
 
 
 engine = pyttsx3.init('sapi5')
@@ -94,6 +95,10 @@ if __name__ == '__main__':
             speak(f"the temperature of islamabad is {weather_go.city_temp}")
 
         # Browser Working
+        elif "open instagram" in query:
+            speak("Opeaning instagram")
+            instagram_controller.Instabot('unknown.domination', 'VoLksWAgOn69Q01BB10Q96', 'bbcnews')
+
         elif "wikipedia" in query:
             speak("Searching Wikipedia...")
             query = query.replace("wikipedia", "")
