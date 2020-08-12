@@ -22,15 +22,27 @@ def morning_commands():
 
     return morning
 
+
 def noon_commands():
-    comm = ["Sir what you want today for your lunch", "What are you main goals today", "Sir Today you got a meeting at 5 P.M", "How was your breakfast Sir!", "Are you working today on new project or want to take on the previous one", "Do you want brunch or want to do lunch only today"]
+    comm = ["Sir what you want today for your lunch", "What are you main goals today",
+            "Sir Today you got a meeting at 5 P.M", "How was your breakfast Sir!",
+            "Are you working today on new project or want to take on the previous one",
+            "Do you want brunch or want to do lunch only today"]
     noon = random.choice(comm)
 
     return noon
 
+
 def afternoon_commands():
-    comm = ["Good Afternoon Sir!", "How was your launch today", "what would you take in dinner Sir", "sir do you want to know your next schedule"]
+    comm = ["Good Afternoon Sir!", "How was your launch today", "what would you take in dinner Sir",
+            "sir do you want to know your next schedule"]
     afternoon = random.choice(comm)
 
     return afternoon
 
+
+def evening_commands():
+    comm = ["Dinner is ready Sir", "Good Evening Sir! How was your day going", "Are you going ou today or not", "Hello world hahaha just kidding sir", "Will you take a cup of coffee", "Sir its time to do exercise pf the evening"]
+    evening = random.choice(comm)
+
+    return evening

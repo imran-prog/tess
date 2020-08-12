@@ -26,7 +26,7 @@ def wishMe():
     elif 13 <= wishing.hour < 17:
         speak(wishing.afternoon_commands())
     elif 17 <= wishing.hour < 23:
-        speak("Good Evening Sir! How was your day today")
+        speak(wishing.evening_commands())
     else:
         speak("Its Getting dark Sir and you are still awake, do you Need any help")
 
