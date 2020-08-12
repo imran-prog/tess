@@ -96,8 +96,8 @@ if __name__ == '__main__':
 
         # Browser Working
         elif "open instagram" in query:
-            speak("Opeaning instagram")
-            instagram_controller.Instabot('unknown.domination', 'VoLksWAgOn69Q01BB10Q96', 'bbcnews')
+            speak("Opening instagram")
+            instagram_controller.Instabot('unknown.domination', 'VoLksWAgOn69Q01BB10Q96', 'watch_me_dominate')
 
         elif "wikipedia" in query:
             speak("Searching Wikipedia...")
@@ -117,15 +117,13 @@ if __name__ == '__main__':
             webbrowser.open('https://www.google.com/maps/place/' + query)
 
         elif "play music" in query or "my music" in query:
+            speak("Starting your music sir")
             open_web("https://www.youtube.com/watch?v=eqOewr6fzC8&list=PLTGYQPmpqDE836ETvP1jxV28ui3V-UbrB")
-
-        elif query == "open Instagram":
-            pass
 
         # System processes
 
         # Creating a New File
-        elif "open a new project file" in query:
+        elif "open a new project file index as" in query:
             query1 = query.replace("open a new project file index as", "")
             speak("What type of file is this")
             extension = takeCommand().lower()
@@ -142,36 +140,47 @@ if __name__ == '__main__':
 
         elif "start code" in query:
             codePath = "C:\\Users\\DESKTOP\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe"
+            speak("Opening Visual Studio Code")
             os.startfile(codePath)
         elif "open pycharm" in query:
             codePath = "D:\\Dead\\PyCharm Community Edition 2020.1.3\\bin\\pycharm64.exe"
+            speak("Opening Pycharm")
             os.startfile(codePath)
         elif "open microsoft edge" in query:
             codePath = "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe"
+            speak("Opening Microsoft Edge")
             os.startfile(codePath)
         elif "open chrome" in query:
             codePath = "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe"
+            speak("Opening Chrome")
             os.startfile(codePath)
         elif "open control panel" in query:
             codePath = "%windir%\\System32\\Control.exe"
+            speak("Opening Control Panel")
             os.startfile(codePath)
         elif "open sublime text" in query:
             codePath = "D:\\Dead\\Sublime Text 3\\sublime_text.exe"
+            speak("Opening Sublime Text")
             os.startfile(codePath)
         elif "open python directory" in query:
             codePath = "E:\\Python"
+            speak("Opening Python Directory")
             os.startfile(codePath)
         elif "open python course" in query:
             codePath = "D:\\Courses V2\\[FreeCourseSite.com] Udemy - Complete Python Developer in 2020 Zero to Mastery"
+            speak("Opening Python Course")
             os.startfile(codePath)
         elif "open notepad" in query:
             codePath = "%windir%\\system32\\notepad.exe"
+            speak("Opening Notepad")
             os.startfile(codePath)
         elif "open slack" in query:
             codePath = "C:\\Users\\Anonymous\\AppData\\Local\\slack\\slack.exe"
+            speak("Opening Slack")
             os.startfile(codePath)
         elif "open zoom" in query:
             codePath = "C:\\Users\\Anonymous\\AppData\\Roaming\\Zoom\\bin\\Zoom.exe"
+            speak("Opening Zoom")
             os.startfile(codePath)
 
         elif "change volume to" in query:
