@@ -97,7 +97,7 @@ if __name__ == '__main__':
         # Browser Working
         elif "open instagram" in query:
             speak("Opening instagram")
-            instagram_controller.Instabot('unknown.domination', 'VoLksWAgOn69Q01BB10Q96', 'watch_me_dominate')
+            instagram_controller.Instabot('unknown.domination', '#', 'fahad.malik.12')
 
         elif "wikipedia" in query:
             speak("Searching Wikipedia...")
