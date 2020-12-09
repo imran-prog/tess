@@ -94,6 +94,9 @@ if __name__ == '__main__':
         elif "temperature" in query:
             speak(f"the temperature of islamabad is {weather_go.city_temp}")
 
+        elif "wind speed" in query:
+            speak(f"the temperature of islamabad is {weather_go.city_wind_speed}")
+
         # Browser Working
         elif "open instagram" in query:
             speak("Opening instagram")
