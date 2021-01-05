@@ -2,7 +2,7 @@
 import speech_recognition as sr
 import pyttsx3, wikipedia, webbrowser, os, smtplib, pyperclip, mouseing
 import time, weather_go, wishing, random, sound, keyboard, files_handling
-import instagram_controller
+import instagram_controller, requests
 
 
 engine = pyttsx3.init('sapi5')
@@ -63,6 +63,34 @@ def sendEmail(to, content):
     server.sendmail('infotainer04@gmail.com', to, content)
     server.close()
 
+def NewsFromBBC(): 
+      
+    # BBC news api 
+    main_url = " https://newsapi.org/v1/articles?source=bbc-news&sortBy=top&apiKey=b7b43b894cbc44efb7107a336900062e"
+  
+    # fetching data in json format 
+    open_bbc_page = requests.get(main_url).json() 
+  
+    # getting all articles in a string article 
+    article = open_bbc_page["articles"] 
+  
+    # empty list which will  
+    # contain all trending news 
+    results = [] 
+      
+    for ar in article: 
+        results.append(ar["title"]) 
+          
+    for i in range(len(results)): 
+          
+        # printing all trending news 
+        print(i + 1, results[i]) 
+  
+    #to read the news out loud for us 
+    from win32com.client import Dispatch 
+    speak = Dispatch("SAPI.Spvoice") 
+    speak.Speak(results)       
+
 
 if __name__ == '__main__':
     wishMe()
@@ -109,6 +137,10 @@ if __name__ == '__main__':
             speak("According To wikipedia")
             print(results)
             speak(results)
+
+        elif "latest news" in query:
+            speak("Here are the news that i fetched from the BBC")
+            NewsFromBBC()
 
         elif "search google map" in query:
             if "search google map from clipboard" == query:
