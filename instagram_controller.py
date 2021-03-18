@@ -49,4 +49,4 @@ class Instabot:
     sleep(20)
 
 
-# Instabot('unknown.domination', 'VoLksWAgOn69Q01BB10Q96', 'bbcnews')  # Username,password
+# Instabot('username', 'password', 'profile_name')  # Username,password
